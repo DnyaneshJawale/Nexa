@@ -1,0 +1,280 @@
+/* ============================================================
+   NEXA — PAGE HEADER SYSTEM
+
+   Purpose:
+   - Give every page a consistent visual beginning
+   - Keep actions semantically attached to the page title
+   - Prevent floating eyebrow labels
+   - Preserve strong spacing on desktop
+   - Convert cleanly to mobile
+   ============================================================ */
+
+
+.nexa-page-header {
+  display: flex;
+
+  width: 100%;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 32px;
+
+  margin: 0;
+
+  padding:
+    40px
+    42px
+    30px;
+}
+
+
+.nexa-page-header-main {
+  min-width: 0;
+
+  max-width: 760px;
+}
+
+
+/* ============================================================
+   CONTEXT
+   ============================================================ */
+
+.nexa-page-context {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  color: #8d94a9;
+
+  font-size: 9px;
+
+  font-weight: 760;
+
+  letter-spacing:
+    0.11em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.nexa-page-context-dot {
+  width: 5px;
+  height: 5px;
+
+  flex: none;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #775ced,
+      #4acfd2
+    );
+
+  box-shadow:
+    0 0 0 4px
+    rgba(
+      111,
+      88,
+      230,
+      0.055
+    );
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.nexa-page-title {
+  margin: 0;
+
+  color: #18213f;
+
+  font-size:
+    clamp(
+      40px,
+      4vw,
+      54px
+    );
+
+  font-weight: 790;
+
+  line-height: 0.98;
+
+  letter-spacing:
+    -0.052em;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
+
+.nexa-page-description {
+  max-width: 820px;
+
+  margin:
+    15px
+    0
+    0;
+
+  color: #737c94;
+
+  font-size: 15px;
+
+  font-weight: 450;
+
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   ACTION
+   ============================================================ */
+
+.nexa-page-action {
+  display: flex;
+
+  flex: none;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-top: 3px;
+}
+
+
+/*
+  Make the first direct button/link in the action area
+  visually sit with the page instead of floating against
+  the browser corner.
+*/
+
+.nexa-page-action > button,
+.nexa-page-action > a {
+  min-height: 42px;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (
+  max-width: 1100px
+) {
+
+  .nexa-page-header {
+    padding:
+      34px
+      28px
+      26px;
+  }
+
+
+  .nexa-page-title {
+    font-size:
+      clamp(
+        37px,
+        5vw,
+        48px
+      );
+  }
+
+
+  .nexa-page-description {
+    font-size: 14px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (
+  max-width: 768px
+) {
+
+  .nexa-page-header {
+    flex-direction: column;
+
+    gap: 17px;
+
+    padding:
+      22px
+      15px
+      24px;
+  }
+
+
+  .nexa-page-header-main {
+    width: 100%;
+  }
+
+
+  .nexa-page-context {
+    margin-bottom: 8px;
+
+    font-size: 8px;
+  }
+
+
+  .nexa-page-title {
+    font-size: 37px;
+
+    line-height: 1;
+  }
+
+
+  .nexa-page-description {
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+
+  .nexa-page-action {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    padding-top: 0;
+  }
+
+
+  .nexa-page-action > button,
+  .nexa-page-action > a {
+    width: 100%;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (
+  max-width: 420px
+) {
+
+  .nexa-page-header {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+
+  .nexa-page-title {
+    font-size: 34px;
+  }
+}

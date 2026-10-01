@@ -1,0 +1,1109 @@
+/* ============================================================
+   NEXA — SETTINGS
+   Compact, semantic, calm.
+   ============================================================ */
+
+
+.settings-page {
+  width: 100%;
+  min-height: 100%;
+
+  color: #19213e;
+}
+
+
+.settings-page-body {
+  width: 100%;
+  max-width: 1480px;
+
+  margin: 0 auto;
+
+  padding:
+    0
+    42px
+    92px;
+}
+
+
+/* ============================================================
+   HEADER ACTIONS
+   ============================================================ */
+
+.settings-header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.settings-save-button,
+.settings-discard-button {
+  display: inline-flex;
+
+  min-height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding:
+    0
+    14px;
+
+  border-radius: 12px;
+
+  font-size: 10px;
+  font-weight: 730;
+
+  cursor: pointer;
+}
+
+
+.settings-save-button {
+  border: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7358eb,
+      #6079ee
+    );
+
+  color: white;
+
+  box-shadow:
+    0 10px 24px
+    rgba(
+      99,
+      85,
+      221,
+      0.18
+    );
+}
+
+
+.settings-save-button:disabled {
+  background: #ececf3;
+
+  color: #a7aab7;
+
+  box-shadow: none;
+
+  cursor: default;
+}
+
+
+.settings-discard-button {
+  border:
+    1px solid #e3e5ec;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.84
+    );
+
+  color: #767d91;
+}
+
+
+/* ============================================================
+   NOTICE
+   ============================================================ */
+
+.settings-notice {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  padding:
+    11px
+    13px;
+
+  border-radius: 12px;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+
+.settings-notice.error {
+  border:
+    1px solid #f3d8d4;
+
+  background: #fff6f4;
+
+  color: #b75d53;
+}
+
+
+.settings-notice.success {
+  border:
+    1px solid #d7eee4;
+
+  background: #f2faf6;
+
+  color: #318468;
+}
+
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+
+.settings-section {
+  overflow: hidden;
+
+  margin-top: 14px;
+
+  border:
+    1px solid
+    rgba(
+      39,
+      47,
+      82,
+      0.07
+    );
+
+  border-radius: 20px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.9
+    );
+
+  box-shadow:
+    0 10px 32px
+    rgba(
+      39,
+      46,
+      83,
+      0.032
+    );
+}
+
+
+.settings-section:first-of-type {
+  margin-top: 0;
+}
+
+
+.settings-section-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding:
+    18px
+    20px
+    16px;
+
+  border-bottom:
+    1px solid #eef0f4;
+}
+
+
+.settings-section-icon {
+  display: grid;
+
+  width: 40px;
+  height: 40px;
+
+  flex: none;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #efecff,
+      #edf8ff
+    );
+
+  color: #6d59da;
+}
+
+
+.settings-section-header > div:last-child > span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #989eaf;
+
+  font-size: 7px;
+  font-weight: 790;
+
+  letter-spacing:
+    0.11em;
+}
+
+
+.settings-section-header h2 {
+  margin: 0;
+
+  color: #303951;
+
+  font-size: 14px;
+  font-weight: 760;
+
+  letter-spacing:
+    -0.02em;
+}
+
+
+.settings-section-header p {
+  margin:
+    4px
+    0
+    0;
+
+  color: #9ca1b1;
+
+  font-size: 8px;
+
+  line-height: 1.45;
+}
+
+
+.settings-section-content {
+  padding:
+    18px
+    20px
+    20px;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.settings-grid {
+  display: grid;
+
+  gap: 14px;
+}
+
+
+.settings-grid.two {
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+}
+
+
+.settings-grid.three {
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+}
+
+
+.settings-grid.one {
+  grid-template-columns:
+    1fr;
+}
+
+
+/* ============================================================
+   FIELDS
+   ============================================================ */
+
+.settings-field {
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.settings-field-label {
+  color: #697189;
+
+  font-size: 8px;
+  font-weight: 720;
+}
+
+
+.settings-field input,
+.settings-field select {
+  width: 100%;
+
+  min-height: 40px;
+
+  padding:
+    0
+    11px;
+
+  border:
+    1px solid #e1e4ec;
+
+  outline: none;
+
+  border-radius: 11px;
+
+  background: #fbfcfe;
+
+  color: #414a63;
+
+  font-size: 9px;
+}
+
+
+.settings-field input:focus,
+.settings-field select:focus {
+  border-color:
+    rgba(
+      109,
+      86,
+      220,
+      0.27
+    );
+
+  background: white;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(
+      109,
+      86,
+      220,
+      0.05
+    );
+}
+
+
+.settings-field small {
+  color: #a0a5b4;
+
+  font-size: 7px;
+
+  line-height: 1.4;
+}
+
+
+/* ============================================================
+   NUMBER INPUT
+   ============================================================ */
+
+.settings-number-input {
+  position: relative;
+}
+
+
+.settings-number-input input {
+  padding-right: 44px;
+}
+
+
+.settings-number-input > span {
+  position: absolute;
+
+  top: 50%;
+  right: 11px;
+
+  color: #9fa4b4;
+
+  font-size: 8px;
+
+  transform:
+    translateY(-50%);
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   TOGGLE STACK
+   ============================================================ */
+
+.settings-toggle-stack,
+.settings-audio-stack {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+
+.settings-toggle-row,
+.settings-fixed-control {
+  display: flex;
+
+  min-height: 62px;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    10px
+    12px;
+
+  border:
+    1px solid #e9ebf1;
+
+  border-radius: 13px;
+
+  background: #fafbfe;
+}
+
+
+.settings-control-icon {
+  display: grid;
+
+  width: 34px;
+  height: 34px;
+
+  flex: none;
+
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: #f0edff;
+
+  color: #7059da;
+}
+
+
+.settings-control-icon.always {
+  background: #eaf9f3;
+
+  color: #328c6a;
+}
+
+
+.settings-control-copy {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.settings-control-copy strong {
+  display: block;
+
+  color: #4c546b;
+
+  font-size: 9px;
+  font-weight: 730;
+}
+
+
+.settings-control-copy p {
+  margin:
+    3px
+    0
+    0;
+
+  color: #9ba0b1;
+
+  font-size: 7px;
+
+  line-height: 1.45;
+}
+
+
+/* ============================================================
+   ALWAYS ON
+   ============================================================ */
+
+.settings-control-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.settings-always-badge {
+  display: inline-flex;
+
+  min-height: 20px;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding:
+    0
+    7px;
+
+  border-radius: 999px;
+
+  background: #e7f7f0;
+
+  color: #34886a;
+
+  font-size: 7px;
+  font-weight: 760;
+}
+
+
+/* ============================================================
+   SWITCH
+   ============================================================ */
+
+.settings-switch {
+  position: relative;
+
+  width: 43px;
+  height: 25px;
+
+  flex: none;
+}
+
+
+.settings-switch input {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+.settings-switch > span {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 999px;
+
+  background: #dce0e8;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease;
+}
+
+
+.settings-switch > span::after {
+  content: "";
+
+  position: absolute;
+
+  width: 19px;
+  height: 19px;
+
+  top: 3px;
+  left: 3px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 2px 5px
+    rgba(
+      34,
+      40,
+      66,
+      0.17
+    );
+
+  transition:
+    transform 160ms ease;
+}
+
+
+.settings-switch input:checked +
+span {
+  background:
+    linear-gradient(
+      135deg,
+      #7358eb,
+      #6079ee
+    );
+}
+
+
+.settings-switch input:checked +
+span::after {
+  transform:
+    translateX(18px);
+}
+
+
+/* ============================================================
+   ROTATION
+   ============================================================ */
+
+.settings-rotation-control {
+  display: grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      1fr
+    )
+    48px;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 42px;
+
+  padding:
+    0
+    10px;
+
+  border:
+    1px solid #e1e4ec;
+
+  border-radius: 11px;
+
+  background: #fbfcfe;
+}
+
+
+.settings-rotation-control input {
+  width: 100%;
+
+  min-height: auto;
+
+  padding: 0;
+
+  border: 0;
+
+  box-shadow: none;
+
+  accent-color: #6e59dd;
+}
+
+
+.settings-rotation-control strong {
+  color: #6756d2;
+
+  font-size: 10px;
+
+  text-align: right;
+}
+
+
+/* ============================================================
+   QUIET HOURS
+   ============================================================ */
+
+.settings-quiet-grid {
+  margin-top: 14px;
+}
+
+
+/* ============================================================
+   UNSAVED BAR
+   ============================================================ */
+
+.settings-unsaved-bar {
+  position: sticky;
+
+  z-index: 20;
+
+  bottom: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 20px;
+
+  padding:
+    10px
+    11px
+    10px
+    14px;
+
+  border:
+    1px solid
+    rgba(
+      108,
+      86,
+      220,
+      0.14
+    );
+
+  border-radius: 15px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.94
+    );
+
+  box-shadow:
+    0 14px 42px
+    rgba(
+      33,
+      40,
+      74,
+      0.12
+    );
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+}
+
+
+.settings-unsaved-bar > div:first-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.settings-unsaved-dot {
+  width: 7px;
+  height: 7px;
+
+  flex: none;
+
+  border-radius: 50%;
+
+  background: #745be0;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(
+      116,
+      91,
+      224,
+      0.08
+    );
+}
+
+
+.settings-unsaved-bar strong {
+  display: block;
+
+  color: #4b536b;
+
+  font-size: 9px;
+}
+
+
+.settings-unsaved-bar
+> div:first-child
+span:last-child {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #9ca1b2;
+
+  font-size: 7px;
+}
+
+
+.settings-unsaved-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.settings-loading-page {
+  display: grid;
+
+  min-height: 70vh;
+
+  place-items: center;
+}
+
+
+.settings-loading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.settings-loading-icon {
+  display: grid;
+
+  width: 46px;
+  height: 46px;
+
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: #efedff;
+
+  color: #7059db;
+}
+
+
+.settings-loading-icon svg,
+.settings-spin {
+  animation:
+    settings-spin
+    850ms
+    linear
+    infinite;
+}
+
+
+.settings-loading strong {
+  display: block;
+
+  color: #4b536b;
+
+  font-size: 11px;
+}
+
+
+.settings-loading span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #9ca1b2;
+
+  font-size: 9px;
+}
+
+
+@keyframes settings-spin {
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (
+  max-width: 1100px
+) {
+
+  .settings-page-body {
+    padding:
+      0
+      28px
+      72px;
+  }
+
+
+  .settings-grid.three {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+
+  .settings-grid.three
+  .settings-field:last-child {
+    grid-column:
+      1 / -1;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (
+  max-width: 768px
+) {
+
+  .settings-page-body {
+    padding:
+      0
+      15px
+      40px;
+  }
+
+
+  .settings-header-actions {
+    width: 100%;
+  }
+
+
+  .settings-header-actions
+  .settings-save-button {
+    flex: 1;
+  }
+
+
+  .settings-section {
+    border-radius: 18px;
+  }
+
+
+  .settings-section-header {
+    padding:
+      16px
+      15px
+      14px;
+  }
+
+
+  .settings-section-content {
+    padding:
+      15px;
+  }
+
+
+  .settings-grid.two,
+  .settings-grid.three {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .settings-grid.three
+  .settings-field:last-child {
+    grid-column: auto;
+  }
+
+
+  .settings-toggle-row,
+  .settings-fixed-control {
+    min-height: 65px;
+
+    padding:
+      10px;
+  }
+
+
+  .settings-unsaved-bar {
+    bottom:
+      calc(
+        82px
+        +
+        env(
+          safe-area-inset-bottom
+        )
+      );
+
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+
+  .settings-unsaved-actions {
+    display: grid;
+
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+
+  .settings-unsaved-actions
+  button {
+    width: 100%;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (
+  max-width: 420px
+) {
+
+  .settings-section-header {
+    gap: 9px;
+  }
+
+
+  .settings-section-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .settings-control-copy p {
+    max-width: 220px;
+  }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .settings-switch > span,
+  .settings-switch > span::after {
+    transition: none;
+  }
+
+
+  .settings-loading-icon svg,
+  .settings-spin {
+    animation: none;
+  }
+
+}

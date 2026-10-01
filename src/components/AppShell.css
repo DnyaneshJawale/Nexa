@@ -1,0 +1,2109 @@
+/* ============================================================
+   NEXA — FINAL RESPONSIVE APPLICATION SHELL
+   ============================================================ */
+
+:root {
+  --nexa-sidebar-width: 252px;
+  --nexa-tablet-width: 82px;
+
+  --nexa-bg: #f7f8fc;
+  --nexa-card: #ffffff;
+
+  --nexa-navy: #19213e;
+  --nexa-text: #555d75;
+  --nexa-muted: #9298aa;
+
+  --nexa-purple: #7559ee;
+  --nexa-blue: #5c7cf0;
+  --nexa-cyan: #46d1ce;
+
+  --nexa-gradient:
+    linear-gradient(
+      135deg,
+      #8959f3 0%,
+      #6873f0 50%,
+      #48d6d0 100%
+    );
+
+  --nexa-border:
+    rgba(
+      32,
+      40,
+      75,
+      0.07
+    );
+}
+
+
+/* ============================================================
+   SHELL
+   ============================================================ */
+
+.nexa-shell {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100dvh;
+
+  background:
+    radial-gradient(
+      circle at 80% -5%,
+      rgba(92, 124, 240, 0.055),
+      transparent 31%
+    ),
+    radial-gradient(
+      circle at 20% 110%,
+      rgba(116, 89, 238, 0.045),
+      transparent 35%
+    ),
+    var(--nexa-bg);
+
+  color:
+    var(--nexa-navy);
+}
+
+
+/* ============================================================
+   AMBIENT BACKGROUND
+   ============================================================ */
+
+.nexa-ambient {
+  position: fixed;
+
+  z-index: 0;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter:
+    blur(10px);
+}
+
+
+.nexa-ambient-one {
+  width: 400px;
+  height: 400px;
+
+  top: -210px;
+  right: 7%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(115, 89, 238, 0.08),
+      transparent 68%
+    );
+}
+
+
+.nexa-ambient-two {
+  width: 350px;
+  height: 350px;
+
+  bottom: -230px;
+  left: 24%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(70, 209, 206, 0.07),
+      transparent 68%
+    );
+}
+
+
+/* ============================================================
+   FIXED SIDEBAR
+   ============================================================ */
+
+.nexa-sidebar {
+  position: fixed;
+
+  z-index: 50;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width:
+    var(--nexa-sidebar-width);
+
+  height: 100dvh;
+
+  padding: 13px;
+
+  border-right:
+    1px solid
+    rgba(40, 47, 78, 0.05);
+
+  background:
+    rgba(
+      248,
+      249,
+      252,
+      0.82
+    );
+
+  backdrop-filter:
+    blur(20px)
+    saturate(145%);
+
+  -webkit-backdrop-filter:
+    blur(20px)
+    saturate(145%);
+}
+
+
+.nexa-sidebar-surface {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--nexa-border);
+
+  border-radius: 25px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.77
+    );
+
+  box-shadow:
+    0 18px 52px
+    rgba(
+      42,
+      49,
+      88,
+      0.045
+    );
+}
+
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+.nexa-brand {
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding:
+    20px
+    17px
+    17px;
+
+  border: 0;
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.nexa-brand-logo {
+  position: relative;
+
+  display: grid;
+
+  width: 45px;
+  height: 45px;
+
+  flex: none;
+
+  place-items: center;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3edff,
+      #edfbff
+    );
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(
+      116,
+      89,
+      238,
+      0.07
+    );
+}
+
+
+.nexa-brand-n {
+  position: relative;
+
+  width: 25px;
+  height: 24px;
+}
+
+
+.nexa-brand-n::before {
+  content: "";
+
+  position: absolute;
+
+  width: 8px;
+  height: 24px;
+
+  left: 1px;
+  top: 0;
+
+  border-radius: 999px;
+
+  background:
+    var(--nexa-gradient);
+}
+
+
+.nexa-brand-n::after {
+  content: "";
+
+  position: absolute;
+
+  width: 24px;
+  height: 8px;
+
+  left: 4px;
+  top: 8px;
+
+  border-radius: 999px;
+
+  background:
+    var(--nexa-gradient);
+
+  transform:
+    rotate(43deg);
+
+  transform-origin:
+    left center;
+}
+
+
+.nexa-brand-spark {
+  position: absolute;
+
+  top: 3px;
+  right: 4px;
+
+  color: #55bfe5;
+}
+
+
+.nexa-brand-copy {
+  min-width: 0;
+}
+
+
+.nexa-brand-copy strong {
+  display: block;
+
+  color: #19213d;
+
+  font-size: 20px;
+
+  font-weight: 790;
+
+  letter-spacing:
+    0.17em;
+
+  line-height: 1;
+}
+
+
+.nexa-brand-copy span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #9ba0b1;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.01em;
+}
+
+
+/* ============================================================
+   NAVIGATION AREA
+   ============================================================ */
+
+.nexa-navigation-area {
+  flex: 1;
+
+  min-height: 0;
+
+  padding:
+    13px
+    12px;
+
+  overflow: hidden;
+}
+
+
+.nexa-nav-label {
+  margin:
+    0
+    10px
+    10px;
+
+  color: #a0a5b6;
+
+  font-size: 9px;
+
+  font-weight: 780;
+
+  letter-spacing:
+    0.13em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.nexa-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.nexa-nav-item {
+  position: relative;
+
+  display: flex;
+
+  min-height: 47px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    0
+    13px;
+
+  border-radius: 14px;
+
+  color: #777f95;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+}
+
+
+.nexa-nav-item:hover {
+  background:
+    rgba(
+      116,
+      89,
+      238,
+      0.05
+    );
+
+  color: #565e77;
+}
+
+
+.nexa-nav-icon {
+  display: grid;
+
+  width: 24px;
+  height: 24px;
+
+  flex: none;
+
+  place-items: center;
+}
+
+
+.nexa-nav-text {
+  flex: 1;
+}
+
+
+.nexa-active-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: transparent;
+}
+
+
+.nexa-nav-item.active {
+  background:
+    linear-gradient(
+      100deg,
+      rgba(
+        118,
+        88,
+        238,
+        0.115
+      ),
+      rgba(
+        72,
+        207,
+        210,
+        0.055
+      )
+    );
+
+  color: #6251d2;
+}
+
+
+.nexa-nav-item.active
+.nexa-nav-icon {
+  color: #6858de;
+}
+
+
+.nexa-nav-item.active
+.nexa-active-dot {
+  background:
+    linear-gradient(
+      135deg,
+      #795ced,
+      #48cfd0
+    );
+
+  box-shadow:
+    0 0 0 4px
+    rgba(
+      111,
+      85,
+      224,
+      0.07
+    );
+}
+
+
+/* ============================================================
+   SIDEBAR FOOTER
+   ============================================================ */
+
+.nexa-sidebar-footer {
+  padding:
+    11px
+    11px
+    12px;
+
+  border-top:
+    1px solid
+    rgba(
+      38,
+      45,
+      75,
+      0.055
+    );
+}
+
+
+/* DEVICE STATUS */
+
+.nexa-device-status {
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    10px;
+
+  border:
+    1px solid
+    rgba(
+      40,
+      47,
+      78,
+      0.065
+    );
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fafbff,
+      #f7fafc
+    );
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+
+.nexa-device-status:hover {
+  transform:
+    translateY(-1px);
+
+  border-color:
+    rgba(
+      112,
+      87,
+      220,
+      0.15
+    );
+
+  box-shadow:
+    0 8px 20px
+    rgba(
+      43,
+      50,
+      90,
+      0.05
+    );
+}
+
+
+.nexa-device-status-icon {
+  display: grid;
+
+  width: 35px;
+  height: 35px;
+
+  flex: none;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  background: #eff1f5;
+
+  color: #969cab;
+}
+
+
+.nexa-device-status-icon.online {
+  background: #e9faf4;
+
+  color: #268c69;
+}
+
+
+.nexa-device-status-copy {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.nexa-device-status-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 6px;
+}
+
+
+.nexa-device-status-title strong {
+  overflow: hidden;
+
+  color: #454d64;
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  text-overflow:
+    ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.nexa-device-status-title span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  flex: none;
+
+  color: #a0a4b4;
+
+  font-size: 8px;
+
+  font-weight: 700;
+}
+
+
+.nexa-device-status-title span i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #b8bbc5;
+}
+
+
+.nexa-device-status-title
+span.online {
+  color: #288a69;
+}
+
+
+.nexa-device-status-title
+span.online i {
+  background: #4dca9b;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      77,
+      202,
+      155,
+      0.1
+    );
+}
+
+
+.nexa-device-status-copy small {
+  display: block;
+
+  margin-top: 4px;
+
+  overflow: hidden;
+
+  color: #a0a5b4;
+
+  font-size: 8px;
+
+  text-overflow:
+    ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.nexa-device-arrow {
+  flex: none;
+
+  color: #b2b6c2;
+}
+
+
+/* ============================================================
+   PROFILE
+   ============================================================ */
+
+.nexa-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 8px;
+
+  padding:
+    8px
+    8px
+    7px;
+}
+
+
+.nexa-avatar {
+  display: grid;
+
+  width: 34px;
+  height: 34px;
+
+  flex: none;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ede8ff,
+      #e9f9fb
+    );
+
+  color: #6959d6;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+.nexa-profile-copy {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.nexa-profile-copy strong {
+  display: block;
+
+  color: #565d73;
+
+  font-size: 9px;
+}
+
+
+.nexa-profile-copy span {
+  display: block;
+
+  margin-top: 3px;
+
+  overflow: hidden;
+
+  color: #a0a4b3;
+
+  font-size: 8px;
+
+  text-overflow:
+    ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.nexa-logout {
+  display: grid;
+
+  width: 31px;
+  height: 31px;
+
+  flex: none;
+
+  place-items: center;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #9ba0b0;
+
+  cursor: pointer;
+
+  transition:
+    color 150ms ease,
+    background 150ms ease;
+}
+
+
+.nexa-logout:hover {
+  background: #fff0ee;
+
+  color: #d56a5e;
+}
+
+
+/* ============================================================
+   MAIN PAGE AREA
+   ============================================================ */
+
+.nexa-main-content {
+  position: relative;
+
+  z-index: 1;
+
+  height: 100dvh;
+
+  margin-left:
+    var(--nexa-sidebar-width);
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+
+  overscroll-behavior:
+    contain;
+
+  scrollbar-gutter:
+    stable;
+}
+
+
+/*
+  This is the important part.
+
+  The sidebar remains fixed.
+
+  ONLY .nexa-main-content scrolls.
+*/
+
+
+/* ============================================================
+   MOBILE ELEMENTS HIDDEN ON DESKTOP
+   ============================================================ */
+
+.nexa-mobile-header,
+.nexa-mobile-navigation,
+.nexa-more-layer {
+  display: none;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (
+  min-width: 769px
+)
+and (
+  max-width: 1080px
+) {
+
+  .nexa-sidebar {
+    width:
+      var(--nexa-tablet-width);
+
+    padding: 10px;
+  }
+
+
+  .nexa-sidebar-surface {
+    border-radius: 21px;
+  }
+
+
+  .nexa-brand {
+    justify-content: center;
+
+    padding:
+      15px
+      5px
+      13px;
+  }
+
+
+  .nexa-brand-copy {
+    display: none;
+  }
+
+
+  .nexa-brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .nexa-navigation-area {
+    padding:
+      12px
+      6px;
+  }
+
+
+  .nexa-nav-label {
+    display: none;
+  }
+
+
+  .nexa-nav {
+    align-items: center;
+
+    gap: 7px;
+  }
+
+
+  .nexa-nav-item {
+    width: 48px;
+    height: 48px;
+
+    min-height: 48px;
+
+    justify-content: center;
+
+    padding: 0;
+  }
+
+
+  .nexa-nav-text,
+  .nexa-active-dot {
+    display: none;
+  }
+
+
+  .nexa-sidebar-footer {
+    padding:
+      8px
+      5px;
+  }
+
+
+  .nexa-device-status {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto;
+
+    justify-content: center;
+
+    padding: 0;
+  }
+
+
+  .nexa-device-status-icon {
+    width: auto;
+    height: auto;
+
+    background: transparent;
+  }
+
+
+  .nexa-device-status-copy,
+  .nexa-device-arrow {
+    display: none;
+  }
+
+
+  .nexa-profile {
+    justify-content: center;
+
+    padding:
+      9px
+      0
+      1px;
+  }
+
+
+  .nexa-profile-copy {
+    display: none;
+  }
+
+
+  .nexa-avatar {
+    display: none;
+  }
+
+
+  .nexa-logout {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .nexa-main-content {
+    margin-left:
+      var(--nexa-tablet-width);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (
+  max-width: 768px
+) {
+
+  .nexa-sidebar {
+    display: none;
+  }
+
+
+  /* ==========================================================
+     MOBILE HEADER
+     ========================================================== */
+
+  .nexa-mobile-header {
+    position: fixed;
+
+    z-index: 80;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+
+    height:
+      calc(
+        61px
+        +
+        env(
+          safe-area-inset-top
+        )
+      );
+
+    align-items: flex-end;
+
+    justify-content:
+      space-between;
+
+    padding:
+      env(
+        safe-area-inset-top
+      )
+      16px
+      13px;
+
+    border-bottom:
+      1px solid
+      rgba(
+        40,
+        47,
+        78,
+        0.055
+      );
+
+    background:
+      rgba(
+        249,
+        250,
+        253,
+        0.89
+      );
+
+    backdrop-filter:
+      blur(20px)
+      saturate(155%);
+
+    -webkit-backdrop-filter:
+      blur(20px)
+      saturate(155%);
+  }
+
+
+  .nexa-mobile-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+
+  .nexa-mobile-logo {
+    display: grid;
+
+    width: 31px;
+    height: 31px;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background:
+      linear-gradient(
+        145deg,
+        #f2ecff,
+        #ebfaff
+      );
+  }
+
+
+  .nexa-mobile-logo span {
+    position: relative;
+
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .nexa-mobile-logo span::before {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 18px;
+
+    left: 1px;
+
+    border-radius: 999px;
+
+    background:
+      var(--nexa-gradient);
+  }
+
+
+  .nexa-mobile-logo span::after {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 6px;
+
+    left: 4px;
+    top: 6px;
+
+    border-radius: 999px;
+
+    background:
+      var(--nexa-gradient);
+
+    transform:
+      rotate(43deg);
+
+    transform-origin:
+      left center;
+  }
+
+
+  .nexa-mobile-brand strong {
+    color: #1b2440;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing:
+      0.17em;
+  }
+
+
+  .nexa-mobile-status {
+    display: flex;
+
+    min-height: 30px;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+      0
+      10px;
+
+    border:
+      1px solid
+      #ebedf3;
+
+    border-radius: 999px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.85
+      );
+
+    color: #9196a7;
+
+    font-size: 9px;
+
+    font-weight: 730;
+
+    cursor: pointer;
+  }
+
+
+  .nexa-mobile-status i {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #b7bac4;
+  }
+
+
+  .nexa-mobile-status.online {
+    color: #288866;
+
+    border-color:
+      rgba(
+        72,
+        198,
+        151,
+        0.18
+      );
+  }
+
+
+  .nexa-mobile-status.online i {
+    background: #4aca99;
+
+    box-shadow:
+      0 0 0 3px
+      rgba(
+        74,
+        202,
+        153,
+        0.1
+      );
+  }
+
+
+  /* ==========================================================
+     MOBILE PAGE CONTENT
+     ========================================================== */
+
+  .nexa-main-content {
+    height: 100dvh;
+
+    margin-left: 0;
+
+    padding-top:
+      calc(
+        61px
+        +
+        env(
+          safe-area-inset-top
+        )
+      );
+
+    padding-bottom:
+      calc(
+        82px
+        +
+        env(
+          safe-area-inset-bottom
+        )
+      );
+
+    overflow-y: auto;
+
+    scrollbar-gutter:
+      auto;
+  }
+
+
+  /* ==========================================================
+     MOBILE BOTTOM NAVIGATION
+     ========================================================== */
+
+  .nexa-mobile-navigation {
+    position: fixed;
+
+    z-index: 90;
+
+    display: grid;
+
+    right: 10px;
+
+    bottom:
+      calc(
+        9px
+        +
+        env(
+          safe-area-inset-bottom
+        )
+      );
+
+    left: 10px;
+
+    height: 64px;
+
+    grid-template-columns:
+      repeat(
+        5,
+        minmax(0, 1fr)
+      );
+
+    gap: 2px;
+
+    padding: 5px;
+
+    border:
+      1px solid
+      rgba(
+        34,
+        42,
+        76,
+        0.075
+      );
+
+    border-radius: 21px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.93
+      );
+
+    box-shadow:
+      0 14px 42px
+      rgba(
+        32,
+        39,
+        74,
+        0.14
+      );
+
+    backdrop-filter:
+      blur(23px)
+      saturate(160%);
+
+    -webkit-backdrop-filter:
+      blur(23px)
+      saturate(160%);
+  }
+
+
+  .nexa-mobile-nav-item {
+    position: relative;
+
+    display: flex;
+
+    min-width: 0;
+    height: 52px;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 15px;
+
+    background: transparent;
+
+    color: #969cac;
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    font-weight: 690;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color:
+      transparent;
+
+    transition:
+      transform 140ms ease,
+      background 140ms ease,
+      color 140ms ease;
+  }
+
+
+  .nexa-mobile-nav-item.active {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(
+          121,
+          91,
+          237,
+          0.11
+        ),
+        rgba(
+          72,
+          207,
+          210,
+          0.055
+        )
+      );
+
+    color: #6554d5;
+  }
+
+
+  .nexa-mobile-nav-item.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 4px;
+
+    width: 16px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background:
+      var(--nexa-gradient);
+  }
+
+
+  .nexa-mobile-nav-item:active {
+    transform:
+      scale(0.95);
+  }
+
+
+  /* ==========================================================
+     MORE SHEET
+     ========================================================== */
+
+  .nexa-more-layer {
+    position: fixed;
+
+    z-index: 150;
+
+    inset: 0;
+
+    display: block;
+  }
+
+
+  .nexa-more-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background:
+      rgba(
+        15,
+        20,
+        39,
+        0.26
+      );
+
+    backdrop-filter:
+      blur(3px);
+
+    -webkit-backdrop-filter:
+      blur(3px);
+  }
+
+
+  .nexa-more-sheet {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding:
+      9px
+      17px
+      calc(
+        20px
+        +
+        env(
+          safe-area-inset-bottom
+        )
+      );
+
+    border:
+      1px solid
+      rgba(
+        32,
+        39,
+        71,
+        0.07
+      );
+
+    border-radius:
+      28px
+      28px
+      0
+      0;
+
+    background:
+      rgba(
+        253,
+        253,
+        255,
+        0.985
+      );
+
+    box-shadow:
+      0 -20px 60px
+      rgba(
+        25,
+        31,
+        58,
+        0.17
+      );
+
+    animation:
+      nexa-sheet-open
+      220ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+  }
+
+
+  @keyframes nexa-sheet-open {
+
+    from {
+      transform:
+        translateY(25px);
+
+      opacity: 0;
+    }
+
+    to {
+      transform:
+        translateY(0);
+
+      opacity: 1;
+    }
+  }
+
+
+  .nexa-sheet-handle {
+    width: 36px;
+    height: 4px;
+
+    margin:
+      0
+      auto
+      14px;
+
+    border-radius: 999px;
+
+    background: #dfe1e8;
+  }
+
+
+  .nexa-sheet-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+      space-between;
+
+    gap: 15px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .nexa-sheet-header span {
+    color: #9ba0b1;
+
+    font-size: 9px;
+
+    font-weight: 760;
+
+    letter-spacing:
+      0.1em;
+
+    text-transform:
+      uppercase;
+  }
+
+
+  .nexa-sheet-header h2 {
+    margin:
+      3px
+      0
+      0;
+
+    color: #202843;
+
+    font-size: 24px;
+
+    font-weight: 780;
+
+    letter-spacing:
+      -0.04em;
+  }
+
+
+  .nexa-sheet-close {
+    display: grid;
+
+    width: 38px;
+    height: 38px;
+
+    place-items: center;
+
+    border:
+      1px solid
+      #ebedf3;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #737a90;
+
+    cursor: pointer;
+  }
+
+
+  /* MOBILE DEVICE CARD */
+
+  .nexa-sheet-device {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border:
+      1px solid
+      #eaecef;
+
+    border-radius: 17px;
+
+    background:
+      linear-gradient(
+        145deg,
+        #fafaff,
+        #f6fbfc
+      );
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .nexa-sheet-device-icon {
+    display: grid;
+
+    width: 42px;
+    height: 42px;
+
+    flex: none;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #eff1f5;
+
+    color: #9298a9;
+  }
+
+
+  .nexa-sheet-device-icon.online {
+    background: #e9faf4;
+
+    color: #258d69;
+  }
+
+
+  .nexa-sheet-device-copy {
+    min-width: 0;
+
+    flex: 1;
+  }
+
+
+  .nexa-sheet-device-copy > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+
+  .nexa-sheet-device-copy strong {
+    color: #40485f;
+
+    font-size: 12px;
+  }
+
+
+  .nexa-sheet-device-copy span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    color: #989dad;
+
+    font-size: 8px;
+
+    font-weight: 700;
+  }
+
+
+  .nexa-sheet-device-copy span i {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #b7bac4;
+  }
+
+
+  .nexa-sheet-device-copy
+  span.online {
+    color: #268563;
+  }
+
+
+  .nexa-sheet-device-copy
+  span.online i {
+    background: #4aca99;
+  }
+
+
+  .nexa-sheet-device-copy small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #9ba0b0;
+
+    font-size: 9px;
+  }
+
+
+  /* MORE OPTIONS */
+
+  .nexa-more-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 13px;
+  }
+
+
+  .nexa-more-options > button {
+    display: flex;
+
+    width: 100%;
+
+    min-height: 67px;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+      10px
+      11px;
+
+    border:
+      1px solid
+      #ebedf2;
+
+    border-radius: 16px;
+
+    background: white;
+
+    color: #777e92;
+
+    text-align: left;
+
+    cursor: pointer;
+  }
+
+
+  .nexa-more-option-icon {
+    display: grid;
+
+    width: 42px;
+    height: 42px;
+
+    flex: none;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: #f2efff;
+
+    color: #6d58d9;
+  }
+
+
+  .nexa-more-options > button
+  > div:nth-child(2) {
+    min-width: 0;
+
+    flex: 1;
+  }
+
+
+  .nexa-more-options strong {
+    display: block;
+
+    color: #40485f;
+
+    font-size: 11px;
+  }
+
+
+  .nexa-more-options span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #a0a4b3;
+
+    font-size: 9px;
+  }
+
+
+  /* MOBILE PROFILE */
+
+  .nexa-mobile-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 14px;
+
+    padding:
+      12px
+      3px
+      2px;
+  }
+
+
+  .nexa-mobile-profile-copy {
+    min-width: 0;
+
+    flex: 1;
+  }
+
+
+  .nexa-mobile-profile-copy strong {
+    display: block;
+
+    color: #505870;
+
+    font-size: 10px;
+  }
+
+
+  .nexa-mobile-profile-copy span {
+    display: block;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+
+    color: #a0a4b3;
+
+    font-size: 9px;
+
+    text-overflow:
+      ellipsis;
+
+    white-space: nowrap;
+  }
+
+
+  .nexa-mobile-signout {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    min-height: 36px;
+
+    padding:
+      0
+      10px;
+
+    border:
+      1px solid
+      #f2dfdc;
+
+    border-radius: 11px;
+
+    background: #fff8f7;
+
+    color: #bf665c;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+  }
+}
+
+
+/* ============================================================
+   SMALL PHONES
+   ============================================================ */
+
+@media (
+  max-width: 390px
+) {
+
+  .nexa-mobile-navigation {
+    right: 7px;
+    left: 7px;
+  }
+
+
+  .nexa-mobile-nav-item {
+    font-size: 7px;
+  }
+
+
+  .nexa-mobile-header {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+
+  .nexa-nav-item,
+  .nexa-device-status,
+  .nexa-mobile-nav-item,
+  .nexa-more-sheet {
+    animation: none;
+
+    transition: none;
+  }
+}
+/* ============================================================
+   NEXA REAL LOGO
+   ============================================================ */
+
+.nexa-brand-logo {
+  overflow: hidden;
+
+  padding: 5px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4f0ff,
+      #edfaff
+    );
+}
+
+
+.nexa-brand-logo-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+}
+
+
+/* Hide the old CSS-generated mark */
+.nexa-brand-n,
+.nexa-brand-spark {
+  display: none !important;
+}
+
+
+/* ============================================================
+   MOBILE LOGO
+   ============================================================ */
+
+.nexa-mobile-logo {
+  overflow: hidden;
+
+  padding: 3px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4f0ff,
+      #edfaff
+    );
+}
+
+
+.nexa-mobile-logo-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center;
+}
+
+
+.nexa-mobile-logo > span {
+  display: none !important;
+}
